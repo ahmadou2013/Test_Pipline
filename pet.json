@@ -1,0 +1,1481 @@
+{
+	"info": {
+		"_postman_id": "322d9436-3f15-4e78-8797-a897d62864eb",
+		"name": "Pet_Components_Others",
+		"description": "This collection verifies the data integrity of Pet v2 metadata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Metadata",
+			"item": [
+				{
+					"name": "GET metadata/speciesCode [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//Check the response returns an array\r",
+									"pm.test(\"Check response returns an array\", function () {\r",
+									"    pm.expect(jsonData).to.be.a(\"Array\");\r",
+									"});\r",
+									"\r",
+									"//Check values of metadata = [array]\r",
+									"pm.test(\"Check values of metadata\", function () {\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"dog\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"cat\");     \r",
+									"});\r",
+									"\r",
+									"// Count elements present in array \r",
+									"pm.test(\"Check number of elements present\", function () {\r",
+									"    pm.expect(jsonData.length, \"Check elements in array are equal to 2\").is.eql(2);\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "dev-eus1-rc-vet-vet-bff.cloud-effem.com"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{Token}}",
+								"disabled": true
+							},
+							{
+								"key": "request-id",
+								"value": "|e0f62061631c4db6933ef4246701103c.b5e79d03c5914c2a"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+							},
+							{
+								"key": "request-context",
+								"value": "appId=cid-v1:e7468e5a-2e95-4cab-8c0e-d015b233b42c"
+							},
+							{
+								"key": "origin",
+								"value": "https://dev-eus2-rc-vet-vet-webapp.cloud-effem.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7"
+							},
+							{
+								"key": "x-trust-token",
+								"type": "text",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{env}}-eus2-rc-api-pet-webservice.cloud-effem.com/v1.3.1/metadata/speciesCode",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-webservice",
+								"cloud-effem",
+								"com"
+							],
+							"path": [
+								"v1.3.1",
+								"metadata",
+								"speciesCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET metadata/genderCode [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//Check the response returns an array\r",
+									"pm.test(\"Check response returns an array\", function () {\r",
+									"    pm.expect(jsonData).to.be.a(\"Array\");\r",
+									"});\r",
+									"\r",
+									"//Check values of metadata = [array]\r",
+									"pm.test(\"Check values of metadata\", function () {\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"male\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"female\");     \r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"unknown\");  \r",
+									"});\r",
+									"\r",
+									"// Count elements present in array \r",
+									"pm.test(\"Check number of elements present\", function () {\r",
+									"    pm.expect(jsonData.length, \"Check elements in array are equal to 3\").is.eql(3);\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "dev-eus1-rc-vet-vet-bff.cloud-effem.com"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{Token}}",
+								"disabled": true
+							},
+							{
+								"key": "request-id",
+								"value": "|e0f62061631c4db6933ef4246701103c.b5e79d03c5914c2a"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+							},
+							{
+								"key": "request-context",
+								"value": "appId=cid-v1:e7468e5a-2e95-4cab-8c0e-d015b233b42c"
+							},
+							{
+								"key": "origin",
+								"value": "https://dev-eus2-rc-vet-vet-webapp.cloud-effem.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7"
+							},
+							{
+								"key": "x-trust-token",
+								"type": "text",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{env}}-eus2-rc-api-pet-webservice.cloud-effem.com/v1.3.1/metadata/genderCode",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-webservice",
+								"cloud-effem",
+								"com"
+							],
+							"path": [
+								"v1.3.1",
+								"metadata",
+								"genderCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET metadata/lifeStyle [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//Check the response returns an array\r",
+									"pm.test(\"Check response returns an array\", function () {\r",
+									"    pm.expect(jsonData).to.be.a(\"Array\");\r",
+									"});\r",
+									"\r",
+									"//Check values of metadata = [array]\r",
+									"pm.test(\"Check values of metadata\", function () {\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"outdoor\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"indoor\");     \r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"both\");  \r",
+									"});\r",
+									"\r",
+									"// Count elements present in array \r",
+									"pm.test(\"Check number of elements present\", function () {\r",
+									"    pm.expect(jsonData.length, \"Check elements in array are equal to 3\").is.eql(3);\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "dev-eus1-rc-vet-vet-bff.cloud-effem.com"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{Token}}",
+								"disabled": true
+							},
+							{
+								"key": "request-id",
+								"value": "|e0f62061631c4db6933ef4246701103c.b5e79d03c5914c2a"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+							},
+							{
+								"key": "request-context",
+								"value": "appId=cid-v1:e7468e5a-2e95-4cab-8c0e-d015b233b42c"
+							},
+							{
+								"key": "origin",
+								"value": "https://dev-eus2-rc-vet-vet-webapp.cloud-effem.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7"
+							},
+							{
+								"key": "x-trust-token",
+								"type": "text",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{env}}-eus2-rc-api-pet-webservice.cloud-effem.com/v1.3.1/metadata/lifeStyle",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-webservice",
+								"cloud-effem",
+								"com"
+							],
+							"path": [
+								"v1.3.1",
+								"metadata",
+								"lifeStyle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET metadata/hair [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//Check the response returns an array\r",
+									"pm.test(\"Check response returns an array\", function () {\r",
+									"    pm.expect(jsonData).to.be.a(\"Array\");\r",
+									"});\r",
+									"\r",
+									"//Check values of metadata = [array]\r",
+									"pm.test(\"Check values of metadata\", function () {\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"Short\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"Medium\");     \r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"Long\");  \r",
+									"});\r",
+									"\r",
+									"// Count elements present in array \r",
+									"pm.test(\"Check number of elements present\", function () {\r",
+									"    pm.expect(jsonData.length, \"Check elements in array are equal to 3\").is.eql(3);\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "dev-eus1-rc-vet-vet-bff.cloud-effem.com"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{Token}}",
+								"disabled": true
+							},
+							{
+								"key": "request-id",
+								"value": "|e0f62061631c4db6933ef4246701103c.b5e79d03c5914c2a"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+							},
+							{
+								"key": "request-context",
+								"value": "appId=cid-v1:e7468e5a-2e95-4cab-8c0e-d015b233b42c"
+							},
+							{
+								"key": "origin",
+								"value": "https://dev-eus2-rc-vet-vet-webapp.cloud-effem.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7"
+							},
+							{
+								"key": "x-trust-token",
+								"type": "text",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{env}}-eus2-rc-api-pet-webservice.cloud-effem.com/v1.3.1/metadata/hair",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-webservice",
+								"cloud-effem",
+								"com"
+							],
+							"path": [
+								"v1.3.1",
+								"metadata",
+								"hair"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET metadata/activityCode [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"//Check the response returns an array\r",
+									"pm.test(\"Check response returns an array\", function () {\r",
+									"    pm.expect(jsonData).to.be.a(\"Array\");\r",
+									"});\r",
+									"\r",
+									"//Check values of metadata = [array]\r",
+									"pm.test(\"Check values of metadata\", function () {\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"low\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"moderate\");     \r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"high\");  \r",
+									"});\r",
+									"\r",
+									"// Count elements present in array \r",
+									"pm.test(\"Check number of elements present\", function () {\r",
+									"    pm.expect(jsonData.length, \"Check elements in array are equal to 3\").is.eql(3);\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "dev-eus1-rc-vet-vet-bff.cloud-effem.com"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{Token}}",
+								"disabled": true
+							},
+							{
+								"key": "request-id",
+								"value": "|e0f62061631c4db6933ef4246701103c.b5e79d03c5914c2a"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+							},
+							{
+								"key": "request-context",
+								"value": "appId=cid-v1:e7468e5a-2e95-4cab-8c0e-d015b233b42c"
+							},
+							{
+								"key": "origin",
+								"value": "https://dev-eus2-rc-vet-vet-webapp.cloud-effem.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7"
+							},
+							{
+								"key": "x-trust-token",
+								"type": "text",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{env}}-eus2-rc-api-pet-webservice.cloud-effem.com/v1.3.1/metadata/activityCode",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-webservice",
+								"cloud-effem",
+								"com"
+							],
+							"path": [
+								"v1.3.1",
+								"metadata",
+								"activityCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET metadata/pathologies [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//Check the response returns an array\r",
+									"pm.test(\"Check response returns an array\", function () {\r",
+									"    pm.expect(jsonData).to.be.a(\"Array\");\r",
+									"});\r",
+									"\r",
+									"//Check values of metadata = [array]\r",
+									"pm.test(\"Check values of metadata\", function () {\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"acute_colitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"acute_colitis\");     \r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"acute_hepatitis\");  \r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"acute_kidney_injury_(aki)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"acute_pancreatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"adverse_food_reactions_(afr)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"adverse_food_reactions_suspicion\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"anorexia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"antibiotic_responsive_diarrhea(ard)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"atopic_dermatitis_(atopy)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"azotemic_ckd_iris_stage_2\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"azotemic_ckd_iris_stage_3\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"azotemic_ckd_iris_stage_4\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"bone_and_joint\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"cachexia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"cholangiohepatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_anxiety\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_colitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_enteropathy_(ce)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_hepatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_pancreatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"antibiotic_responsive_diarrhea(ard)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"atopic_dermatitis_(atopy)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"azotemic_ckd_iris_stage_2\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"azotemic_ckd_iris_stage_3\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"azotemic_ckd_iris_stage_4\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"bone_and_joint\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"cachexia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"cholangiohepatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_anxiety\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_colitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_enteropathy_(ce)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_hepatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_pancreatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_pancreatitis_(mild_moderate)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_pancreatitis_(severe)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"chronic_valvular_heart_disease_(cvhd)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"ckd_with_hypertension\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"ckd_with_proteinuria\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"congestive_heart_failure_(chf)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"constipation\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"copper_storage_disease\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"cutaneous_afr\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"delayed_gastric_emptying\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"dental_plaque\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"dermatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"diabetes_mellitus_(dm)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"dilated_cardiomyopathy_(dcm)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"dysrexia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"early_ckd_(iris_stage_1)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"exocrine_pancreatic_insufficiency_(epi)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"feline_hepatic_lipidosis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"feline_idiopathic_cystitis_(fic)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"feline_triaditis(enteritis+cholangiohepatitis+pancreatitis)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"fibre_responsive_colitis_(including_stress_diarrhea)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"flea_bite_allergic_dermatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"gastritis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"gastrointestinal_afr\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"gastrointestinal_condition_requiring_high_fibre_content\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"gastrointestinal_sensitivity\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"glomerulonephritis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hairball\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hairball_management\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hepatic_encephalopathy\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hyperlipidemia_(fasting_hyperlipidemia)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hyperlipidemia_severe\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hypertension\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hyperthyroidism\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hypertrophic_cardiomyopathy_(hcm)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"hypothyroidism\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"inflammatory_bowel_disease_(ibd)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"kidney_dysplasia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"liver_failure\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"lymphangiectasia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"maldigestion_malabsorption\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"megacolon\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"megaoesophagus\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"neoplasia_(cancer)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"obesity_bcs_7_(out_of_9)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"obesity_bcs_8_(out_of_9)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"obesity_bcs_9_(out_of_9)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"obstipation\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"oesophagitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"osteoarthritis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"osteochondritis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"overweight_bcs_6_(out_of_9)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"oxalate_urolithiasis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"perianal_fistula\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"polycystic_kidney_disease_(pkd)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"portosystemic_shunt_(pss)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"prone_cardiac\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"protein_losing_enteropathy_(ple)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"protein-losing_nephropathy_(pln)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"proteinuria\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"pyodermatitis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"sarcopenia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"self-induced_alopecia\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"skin_and_coat_sensitivity\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"stress_and_anxiety\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"struvite_urolithiasis\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"tartar\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"underweight_bcs_1_(out_of_9)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"underweight_bcs_2_(out_of_9)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"underweight_bcs_3_(out_of_9)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"urinary_tract_infection_(uti)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"urolithiasis_calcium_oxalate_(or_calcium_phosphate)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"urolithiasis_cystine\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"urolithiasis_struvite\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"urolithiasis_urate_(or_xanthine)\");\r",
+									"    pm.expect(jsonData, \"Check value\").to.contains(\"weight_gain\");\r",
+									"});\r",
+									"\r",
+									"// Count elements present in array\r",
+									"pm.test(\"Check number of elements present\", function () {\r",
+									"    pm.expect(jsonData.length, \"Check elements in array are equal to 97\").is.eql(97);\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "dev-eus1-rc-vet-vet-bff.cloud-effem.com"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{Token}}",
+								"disabled": true
+							},
+							{
+								"key": "request-id",
+								"value": "|e0f62061631c4db6933ef4246701103c.b5e79d03c5914c2a"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+							},
+							{
+								"key": "request-context",
+								"value": "appId=cid-v1:e7468e5a-2e95-4cab-8c0e-d015b233b42c"
+							},
+							{
+								"key": "origin",
+								"value": "https://dev-eus2-rc-vet-vet-webapp.cloud-effem.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7"
+							},
+							{
+								"key": "x-trust-token",
+								"type": "text",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{env}}-eus2-rc-api-pet-webservice.cloud-effem.com/v1.3.1/metadata/pathologies",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-webservice",
+								"cloud-effem",
+								"com"
+							],
+							"path": [
+								"v1.3.1",
+								"metadata",
+								"pathologies"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "App-code",
+			"item": [
+				{
+					"name": "POST /app-code [201]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.collectionVariables.set(\"newCode\", jsonData.code)\r",
+									"\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"TEST_QA12345\",\r\n  \"applicationName\": \"Test QA to delete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/app-code",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"app-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /app-code [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//VALUE CHECK\r",
+									"pm.test(\"Check 'code' & 'applicationName' have expected values\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"TEST_QA12345\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Test QA to delete\");\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 1000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/app-code/",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"app-code",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /app-code [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//VALUE CHECK\r",
+									"pm.test(\"Check 'applicationName' has expected value\", function () {\r",
+									"    pm.expect(jsonData.applicationName, \"Check applicationName\").to.equal(\"Test QA to delete2\");\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"applicationName\": \"Test QA to delete2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/app-code/{{newCode}}",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"app-code",
+								"{{newCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /app-code [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//VALUE CHECK\r",
+									"pm.test(\"Check 'code' & 'applicationName' have expected values\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"TEST_QA12345\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Test QA to delete2\");\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/app-code",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"app-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /app-code [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/app-code/{{newCode}}",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"app-code",
+								"{{newCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /app-code [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//VALUE CHECK\r",
+									"pm.test(\"Check app-code is correctly deleted\", function () {\r",
+									"    pm.expect(pm.response.text()).not.to.include(\"Test QA to delete2\");\r",
+									"    pm.expect(pm.response.text()).not.to.include(\"TEST_QA12345\");\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 1000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/app-code",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"app-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /app-code [404]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"//VALUE CHECK\r",
+									"pm.test(\"Check error message is correctly deleted\", function () {\r",
+									"    pm.expect(jsonData.message, \"Check error message\").to.contains(\"App code not found!\");\r",
+									"});\r",
+									"\r",
+									"setTimeout(function(){}, 2000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/app-code/{{newCode}}",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"app-code",
+								"{{newCode}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Export",
+			"item": [
+				{
+					"name": "GET /export/pets [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}"
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/{{verstg}}/pets?page=1&updatedSince=1637770994087&limit=10",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"{{verstg}}",
+								"pets"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "updatedSince",
+									"value": "1637770994087"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /export/visists [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}",
+								"equals": true
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/{{verstg}}/visits?page=1&updatedSince=1637770994087&limit=10",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"{{verstg}}",
+								"visits"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "updatedSince",
+									"value": "1637770994087"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /export/weights [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}",
+								"equals": true
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/{{verstg}}/weights?page=1&limit=10",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"{{verstg}}",
+								"weights"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "updatedSince",
+									"value": "1637770994087",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /export/petstatus [200]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trust-token",
+								"value": "{{xTrustToken}}",
+								"equals": true
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{env}}-eus2-rc-api-pet-{{direct}}/{{verstg}}/petstatuses?page=1&limit=10",
+							"protocol": "https",
+							"host": [
+								"{{env}}-eus2-rc-api-pet-{{direct}}"
+							],
+							"path": [
+								"{{verstg}}",
+								"petstatuses"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "updatedSince",
+									"value": "1637770994087",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var isCodeOK = \"false\";",
+					"try{",
+					"    var extractedCode = request.name.match(/.* (.*)/)[1]",
+					"    code = extractedCode.substring(1)",
+					"    code = code.slice(0, -1)",
+					"    //console.log(code)",
+					"    if(code === \"xxx\"){",
+					"        console.log(\"No code check\")",
+					"        isCodeOK = \"true\"",
+					"    }",
+					"    else if(pm.response.code === parseInt(code)){",
+					"        isCodeOK = \"true\";",
+					"    }",
+					"    else{",
+					"        isCodeOK = \"false\";",
+					"    }",
+					"    if(code !== \"xxx\"){",
+					"        pm.test(\"Check if status code is \" + code, function () {",
+					"            pm.expect(isCodeOK).equal(\"true\")",
+					"        });",
+					"    }",
+					"}catch(e){",
+					"    console.log(\"No [xxx] code in request name\")",
+					"    isCodeOK = \"true\"",
+					"}",
+					"if(isCodeOK === \"false\"){",
+					"    try{",
+					"        var jsonData = pm.response.json();",
+					"        if(jsonData.error.stack !== null ",
+					"        || jsonData.error.stack !==  undefined){",
+					"            console.log(\"ERROR STACK : \" + jsonData.error.stack)",
+					"        }",
+					"    }",
+					"    catch(e){",
+					"        try{",
+					"            if(jsonData.message !== null ",
+					"            || jsonData.message !==  undefined){",
+					"                console.log(\"ERROR MESSAGE : \" + jsonData.error.message)",
+					"            }",
+					"        }",
+					"        catch(e){",
+					"            console.log(\"ERROR : \" + jsonData)",
+					"        }",
+					"    }",
+					"}"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "newCode",
+			"value": ""
+		}
+	]
+}

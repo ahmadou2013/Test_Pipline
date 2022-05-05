@@ -1,0 +1,169 @@
+{
+	"id": "cf26cb6d-a070-475d-93be-ae9d07b28bd1",
+	"name": "dev",
+	"values": [
+		{
+			"key": "apim_sub_key",
+			"value": "7ebf7fcab51f46e1b0e6d477688461c9",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "xTrustToken",
+			"value": "47A54N31Y34W10A43Y52K50N58B53P50C17S14W58Y",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "protocol",
+			"value": "https",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "env",
+			"value": "dev",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "internal",
+			"value": "eus2-rc-apim.azure-api.net/internal",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "external",
+			"value": "eus2-rc-apim.azure-api.net/private",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "direct",
+			"value": "webservice.cloud-effem.com",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "nutrition_api_private_url",
+			"value": "{{env}}-{{external}}/nutrition",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "okta_token",
+			"value": "MG9hcm0waWJqeTFvR2lBMW4waDc6a1YydExpLUZqZDVNbTlZa1V4QjFNN0FLOWVGQ3M4N2xEbTFpVW5ERw==",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "okta_env",
+			"value": "accountdev",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "username",
+			"value": "jean.cathary%40c-veterinaire.com",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "password",
+			"value": "Royal12345",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "accessToken",
+			"value": "eyJraWQiOiJMZTJLVlJKa1FnZlB3QTFNUDB1Z09uZzFXR0ZxbjY4VUhNai1qYjFFanlVIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULk5Sc1NRLXZWUWxJcnBGUXVtY09Dc0h4M3pjcEg3LTFaMWhpbWhXaHJXbkUiLCJpc3MiOiJodHRwczovL2FjY291bnRkZXYucm95YWxjYW5pbi5jb20vb2F1dGgyL2RlZmF1bHQiLCJhdWQiOiJodHRwczovL2NpYW1hcGkucm95YWxjYW5pbi5jb20iLCJpYXQiOjE2MjM3NjUzODgsImV4cCI6MTYyMzc2ODk4OCwiY2lkIjoiMG9hcm0waWJqeTFvR2lBMW4waDciLCJ1aWQiOiIwMHVwemdjaGdiTkZ5QUNKdzBoNyIsInNjcCI6WyJvcGVuaWQiXSwic3ViIjoiamVhbi5jYXRoYXJ5QGMtdmV0ZXJpbmFpcmUuY29tIiwiZXh0ZXJuYWxJZCI6IjkzZmQ0MjVmLTAzNDQtNDRlMi04OWQwLTU2ZjFjYmI0YjE2NyJ9.G952oU8Zl9p3XdrwcJGcF1pVN0UIvPKFa2eqLZXvrTWyliithcLIt3QGTkFXgSTTKGMJVOJYuPcANq9LgoClWHgJpSE5JT_iBxZRQmc88RW851_yn6rncH1fBkHpkN2gPHvTKbihEr4nl9UibKzqR_7MkMqIeskvuTpTMpX7fe2N4lLDYyZE_AyymHY5jgGLqwLLVFG97YfKG-d6efWmgKh3kM9-rsLClkxmhbUXQiLANgdwri6aNcyIFdrN7as4p5DH0Ai_2cZrgvHG6K5LnK1G9JRAVnMwRhBiQiD2JE9HopW4GepgsqmMaUw6aD0LhzZPm2zQSJMNcpAY5o5wVw",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "username_shelter",
+			"value": "testautofr@yopmail.com",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "password_shelter",
+			"value": "RoyalStart123!",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "direct_version",
+			"value": "v1.3.1",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "scope",
+			"value": "openid user.consent:read purposes:read user.consent:collect user.consent:delete",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "current_timestamp",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "internal2",
+			"value": "eus2-rcapi-apim.azure-api.net/internal",
+			"enabled": true
+		},
+		{
+			"key": "verstg",
+			"value": "export/",
+			"enabled": true
+		},
+		{
+			"key": "subKey",
+			"value": "c3fb83cc0a84464e8e7b78f043361324",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "redirect_uri_env",
+			"value": "https://uat-eus2-rc-bap-breeder-webapp.cloud-effem.com/implicit/callback",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "username_breeder",
+			"value": "jean.cathary@c-veterinaire.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "password_breeder",
+			"value": "Royal12345",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "envurl",
+			"value": "eus1-rc-api-shelter",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "base_auth",
+			"value": "dev",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "client_id_auth",
+			"value": "0oaaysnersEFrnhoo0x6",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-05-04T16:03:35.875Z",
+	"_postman_exported_using": "Postman/9.17.1"
+}
