@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "7fb15f4a-c364-4abb-a20f-f62a61828b0a",
+		"name": "Get tags",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBrYXJhdGUxMjM0NS5jb20iLCJ1c2VybmFtZSI6ImthcmF0ZTU0MzIxIiwiaWF0IjoxNjUwMDM4MTEzLCJleHAiOjE2NTUyMjIxMTN9.nT6k9TtFzhSwRuWgCVevbmr9FeeCUGACjeEQZxNjnJo",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"karate@karate12345.com\",\n        \"password\": \"karate12345\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.realworld.io/api/users/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tags",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBrYXJhdGUxMjM0NS5jb20iLCJ1c2VybmFtZSI6ImthcmF0ZTU0MzIxIiwiaWF0IjoxNjUwMDM4MTEzLCJleHAiOjE2NTUyMjIxMTN9.nT6k9TtFzhSwRuWgCVevbmr9FeeCUGACjeEQZxNjnJo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.realworld.io/api/tags",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tags Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBrYXJhdGUxMjM0NS5jb20iLCJ1c2VybmFtZSI6ImthcmF0ZTU0MzIxIiwiaWF0IjoxNjUwMDM4MTEzLCJleHAiOjE2NTUyMjIxMTN9.nT6k9TtFzhSwRuWgCVevbmr9FeeCUGACjeEQZxNjnJo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.realworld.io/api/tags",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get articles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBrYXJhdGUxMjM0NS5jb20iLCJ1c2VybmFtZSI6ImthcmF0ZTU0MzIxIiwiaWF0IjoxNjUwMDM4MTEzLCJleHAiOjE2NTUyMjIxMTN9.nT6k9TtFzhSwRuWgCVevbmr9FeeCUGACjeEQZxNjnJo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.realworld.io/api/articles?limit=10&offset=0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBrYXJhdGUxMjM0NS5jb20iLCJ1c2VybmFtZSI6ImthcmF0ZTU0MzIxIiwiaWF0IjoxNjUwMDE1NDA1LCJleHAiOjE2NTUxOTk0MDV9.CnLFvVBYzKjW3IA_r1x00FOADFTqhTHk5QczqJgwjuw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"article\": {\n        \"tagList\": [\n            \"terre\",\n            \"lune\",\n            \"cloud\"\n        ],\n        \"title\": \"bla bla blasf\",\n        \"description\": \"la terre\",\n        \"body\": \"la terre est jolie\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.realworld.io/api/articles/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"articles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete article",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBrYXJhdGUxMjM0NS5jb20iLCJ1c2VybmFtZSI6ImthcmF0ZTU0MzIxIiwiaWF0IjoxNjUwMDE1NDA1LCJleHAiOjE2NTUxOTk0MDV9.CnLFvVBYzKjW3IA_r1x00FOADFTqhTHk5QczqJgwjuw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.realworld.io/api/articles/bla-bla-blasf-38288",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"articles",
+						"bla-bla-blasf-38288"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
